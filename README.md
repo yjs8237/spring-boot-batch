@@ -207,3 +207,21 @@ public class BatchRunner implements CommandLineRunner {
 ```
 
 
+### 실행결과
+
+```java
+2020-05-11 23:29:31.420  INFO 11268 --- [nio-8080-exec-1] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=demoJob]] launched with the following parameters: [{jobID=1589207371417}]
+2020-05-11 23:29:31.423  INFO 11268 --- [nio-8080-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [stepOne]
+2020-05-11 23:29:31.424  INFO 11268 --- [nio-8080-exec-1] com.example.springbatch.batch.MyTaskOne  : MyTaskOne start
+2020-05-11 23:29:31.424  INFO 11268 --- [nio-8080-exec-1] com.example.springbatch.batch.MyTaskOne  : MyTaskOne end
+2020-05-11 23:29:31.425  INFO 11268 --- [nio-8080-exec-1] o.s.batch.core.step.AbstractStep         : Step: [stepOne] executed in 2ms
+2020-05-11 23:29:31.428  INFO 11268 --- [nio-8080-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [stepTwo]
+2020-05-11 23:29:31.429  INFO 11268 --- [nio-8080-exec-1] com.example.springbatch.batch.MyTaskTwo  : MyTaskTwo start
+2020-05-11 23:29:31.430  INFO 11268 --- [nio-8080-exec-1] com.example.springbatch.batch.MyTaskTwo  : MyTaskTwo end
+2020-05-11 23:29:31.431  INFO 11268 --- [nio-8080-exec-1] o.s.batch.core.step.AbstractStep         : Step: [stepTwo] executed in 3ms
+2020-05-11 23:29:31.433  INFO 11268 --- [nio-8080-exec-1] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=demoJob]] completed with the following parameters: [{jobID=1589207371417}] and the following status: [COMPLETED] in 12ms
+
+Process finished with exit code -1
+
+```
+
